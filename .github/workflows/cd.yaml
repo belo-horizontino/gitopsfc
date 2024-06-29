@@ -20,7 +20,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           # Assuming your image name is 'gitopsfc' (replace if different)
           repository: ${{ secrets.DOCKER_USERNAME }}/gitopsfc
-          tags: 
-            - ${{ github.sha }}  # Tag with commit SHA for version tracking
-            - latest          # Latest tag for easy deployment
-
+          tags: ${{ github.sha }}, latest
